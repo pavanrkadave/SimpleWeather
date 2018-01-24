@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e2e2"
+    android:padding="16dp"
+    tools:context="io.github.pavanrkadave.simpleweather.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/weather_icon_view"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/icon_of_the_weather"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weather_icon_view"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="28sp"
+                    tools:text="Sirsi,IN" />
+
+                <TextView
+                    android:id="@+id/weather_temprature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/city_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:text="29 Degrees" />
+
+                <TextView
+                    android:id="@+id/weather_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weather_temprature"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:typeface="serif"
+                    tools:text="Currently Sunny" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/powered_by_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/weather_channel_logo"
+            android:layout_centerHorizontal="true"
+            android:text="@string/powered_by"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/weather_channel_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/logo_of_the_weather_channel"
+            android:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
